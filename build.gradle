@@ -15,6 +15,10 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web:2.2.2.RELEASE'
 
+	implementation 'org.thymeleaf:thymeleaf:3.0.6.RELEASE'
+	implementation 'org.xhtmlrenderer:flying-saucer-pdf-itext5:9.1.6'
+	implementation 'net.sf.jtidy:jtidy:r938'
+
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}

@@ -17,7 +17,7 @@ import java.io.ByteArrayOutputStream;
 @RequestMapping(path="/documents")
 public class DocumentController {
 
-    public static final String DOCUMENT_TEMPLATE = "template/factura";
+    public static final String DOCUMENT_TEMPLATE = "factura";
     private final IDocumentService documentService;
     private final IDocumentGeneratorService generatorService;
 
