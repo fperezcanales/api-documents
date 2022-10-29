@@ -19,6 +19,6 @@ RUN groupadd -r -g 10001 appGrp \
 
 USER 10000
 
-COPY --from=build /app/build/libs/my-spring-retry-0.0.1-SNAPSHOT.jar /app/app.jar
+COPY --from=build /app/build/libs/document-api-rest-1.0.jar /app/app.jar
 
 ENTRYPOINT ["java","-jar","/app/app.jar"]
