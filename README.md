@@ -7,3 +7,34 @@
 * Dockerfile
 * Docker-compose
 
+## Configure Spring Actuator
+Actuator trae funciones listas para producción a nuestra aplicación.
+
+**Monitorear nuestra aplicación, recopilar métricas, comprender el tráfico o el estado de nuestra base de datos se vuelve trivial con esta dependencia.**
+
+```
+http://localhost:8090/actuator/
+```
+Reponse
+```
+{
+  "_links": {
+    "self": {
+      "href": "http://localhost:8090/actuator",
+      "templated": false
+    },
+    "health-path": {
+      "href": "http://localhost:8090/actuator/health/{*path}",
+      "templated": true
+    },
+    "health": {
+      "href": "http://localhost:8090/actuator/health",
+      "templated": false
+    },
+    "info": {
+      "href": "http://localhost:8090/actuator/info",
+      "templated": false
+    }
+  }
+}
+```

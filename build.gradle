@@ -22,6 +22,9 @@ dependencies {
 	implementation 'org.xhtmlrenderer:flying-saucer-pdf-itext5:9.1.6'
 	implementation 'net.sf.jtidy:jtidy:r938'
 
+	// Actuator
+	implementation ('org.springframework.boot:spring-boot-starter-actuator:2.7.2')
+
 	// https://mvnrepository.com/artifact/com.h2database/h2
 	testImplementation group: 'com.h2database', name: 'h2', version: '2.1.214'
 
@@ -29,6 +32,15 @@ dependencies {
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
+
+	testImplementation platform("org.testcontainers:testcontainers-bom:1.17.2")
+
+	testImplementation 'org.junit.jupiter:junit-jupiter-api'
+	testImplementation 'org.testcontainers:junit-jupiter:1.17.4'
+	//testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.11.2'
+
+	//testImplementation group: 'org.mockito', name: 'mockito-junit-jupiter', version: '4.8.1'
+
 }
 
 test {

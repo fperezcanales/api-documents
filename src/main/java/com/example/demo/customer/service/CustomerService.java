@@ -1,5 +1,4 @@
 package com.example.demo.customer.service;
-
 import com.example.demo.customer.entities.Customer;
 import com.example.demo.customer.repository.CustomerRepository;
 import org.springframework.stereotype.Service;
