@@ -1,0 +1,9 @@
+spring:
+  flyway:
+    enabled: true
+  datasource:
+    platform: postgres
+    driverClassName: org.postgresql.Driver
+    url: ${POSTGRESQL_HOST}
+    username: ${POSTGRESQL_USERNAME}
+    password: ${POSTGRESQL_PASS}

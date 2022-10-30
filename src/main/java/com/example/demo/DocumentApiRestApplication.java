@@ -7,7 +7,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan({"com.example.demo"})
+//@ComponentScan({"com.example.demo"})
 @EntityScan("com.example.demo")
 public class DocumentApiRestApplication  extends SpringBootServletInitializer {
 
