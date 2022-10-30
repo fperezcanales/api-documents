@@ -42,3 +42,8 @@ Reponse
   }
 }
 ```
+
+### Run App local
+````
+gradle bootRun --args='--spring.profiles.active=local'
+````

@@ -1,11 +1,12 @@
 ARG gradleVersion=7.2.0-jdk17-alpine
+# ARG gradleVersion=5.6.2-jdk11
 
 ## Stage 1 gradle build
 FROM gradle:${gradleVersion} AS build
 
 WORKDIR /app
 COPY . .
-RUN gradle build
+RUN gradle build -x test
 
 FROM openjdk:17.0.1-jdk-slim
 COPY --from=build /app /app
@@ -19,6 +20,7 @@ RUN groupadd -r -g 10001 appGrp \
 
 USER 10000
 
-COPY --from=build /app/build/libs/document-api-rest-1.0.jar /app/app.jar
+COPY --from=build /app/build/libs/document-api-rest-1.0.jar /opt/app/app.jar
+COPY --from=build /app/src/main/resources/templates /opt/templates
 
-ENTRYPOINT ["java","-jar","/app/app.jar"]
+ENTRYPOINT ["java","-jar","/opt/app/app.jar"]

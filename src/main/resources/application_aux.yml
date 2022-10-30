@@ -1,9 +1,0 @@
-spring:
-  flyway:
-    enabled: true
-  datasource:
-    platform: postgres
-    driverClassName: org.postgresql.Driver
-    url: jdbc:postgresql://dpg-cdf8q45a4992md48fd0g-a.oregon-postgres.render.com/menucloud_crm?ssl=true&sslmode=require
-    username: menucloud_crm_user
-    password: "LVkVVtzWaXxv6gLbAFYmVDdSeFjkp5LK"
