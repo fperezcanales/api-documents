@@ -7,6 +7,10 @@
 * Dockerfile
 * Docker-compose
 
+## DB Integration Tests with Spring Boot and Testcontainers
+
+How to use Testcontainers for integration testing with Spring Data JPA and the PostgreSQL database.
+
 ## Configure Spring Actuator
 Actuator trae funciones listas para producción a nuestra aplicación.
 
