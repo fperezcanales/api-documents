@@ -51,6 +51,9 @@ jobs:
       - attach_workspace:
           at: .
       - run:
+          name: chmod permissions
+          command: chmod +x ./gradlew
+      - run:
           name: Run tests in parallel
           # Use "./gradlew test" instead if tests are not run in parallel
           command: |
